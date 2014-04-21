@@ -12,14 +12,29 @@ import re
 import calendar
 import math
 import random
+def NewPoint():
+    if (debug == 1):
+        print ("Running Random Point")
+    if (debug == 1):
+        print("[DEBUG] Point before step: ", point)
+    point = random.randint(0,digits-2)
+    list = []
+    charval = Password_string[point]
+    list.append(charval)
+    if (debug == 1):
+        print("[DEBUG] Point after step: ", point)
+    if (debug == 1):
+        print("[DEBUG] ", list)
 
 # Set variables
-debug = 0
+point = 0
+debug = 1
 value = 0
 list = []
 output = []
 password = []
 qual = 0
+
 
 # Get password length from user
 while (qual != 1):
@@ -118,34 +133,24 @@ while (value != int(passlength)):
         if (debug == 1):
             print("[DEBUG] Password currently: ", PasswordValue)
         value = value + 1
-        point = random.randint(0,digits-2)
-        list = []
+        NewPoint()
         if (debug == 1):
             print("[DEBUG] Point after step: ", point)
-        charval = Password_string[point]
-        list.append(charval)
-        
     else:
         if 2 == int(intcharval):
             if (debug == 1):
                 print("[DEBUG] Point before step: ", point)
-            point = random.randint(0,digits-2)
-            list = []
+            NewPoint()
             if (debug == 1):
                 print("[DEBUG] Point after step: ", point)
-            charval = Password_string[point]
-            list.append(charval)
             if (debug == 1):
                 print("[DEBUG] ", list)
         if  126 < int(intcharval):
             if (debug == 1):
                 print("[DEBUG] Point before step: ", point)
-            point = random.randint(0,digits-2)
-            list = []
+            NewPoint()
             if (debug == 1):
                 print("[DEBUG] Point after step: ", point)
-            charval = Password_string[point]
-            list.append(charval)
             if (debug == 1):
                 print("[DEBUG] ", list)
         else:
@@ -155,12 +160,9 @@ while (value != int(passlength)):
             if  point == digits:
                 if (debug == 1):
                     print("[DEBUG] Point before step: ", point)
-                point = random.randint(0,digits-2)
-                list = []
+                NewPoint()
                 if (debug == 1):
                     print("[DEBUG] Point after step: ", point)
-                charval = Password_string[point]
-                list.append(charval)
                 if (debug == 1):
                     print("[DEBUG] ", list)
             else:
@@ -174,14 +176,5 @@ while (value != int(passlength)):
 if (debug == 1):
     print("[DEBUG] char val is: " , intcharval)
 print ("[INFO] Your password is: ", PasswordValue)
-        
-        
-# # Else
-
-# # # Increase point by 1 in int
-
-# # ## Append value to charval
-
-
 
 

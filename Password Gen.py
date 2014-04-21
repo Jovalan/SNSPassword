@@ -1,5 +1,11 @@
 #!/usr/bin/python
 
+__author__ = "Stephen Benjamin, Joshua Minor"
+__license__ = "GPL"
+__version__ = "0.01"
+__status__ = "Development"
+
+
 # Imports
 from datetime import datetime
 import re

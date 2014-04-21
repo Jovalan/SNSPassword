@@ -12,6 +12,16 @@ import re
 import calendar
 import math
 import random
+
+# Set variables
+point = 0
+debug = 1
+value = 0
+list = []
+output = []
+password = []
+qual = 0
+
 def NewPoint():
     if (debug == 1):
         print ("Running Random Point")
@@ -25,16 +35,7 @@ def NewPoint():
         print("[DEBUG] Point after step: ", point)
     if (debug == 1):
         print("[DEBUG] ", list)
-
-# Set variables
-point = 0
-debug = 1
-value = 0
-list = []
-output = []
-password = []
-qual = 0
-
+    return point, list, charval
 
 # Get password length from user
 while (qual != 1):

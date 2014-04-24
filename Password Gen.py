@@ -23,6 +23,7 @@ password = []
 qual = 0
 
 def NewPoint():
+    global point
     if (debug == 1):
         print ("Running Random Point")
     if (debug == 1):
